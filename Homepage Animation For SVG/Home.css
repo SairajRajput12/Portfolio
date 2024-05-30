@@ -1,0 +1,266 @@
+/*giving animation to the hammer*/
+#g30,#g46,#path64,#path64,#g68,#path84,#g86,#g98,#g110,#g122,#g134,#g146,#g158,#path66,#path82{
+    animation-name: PanaAnimation;
+    animation-duration: 2s;
+    animation-delay: 0.01s;
+    animation-iteration-count: infinite;
+    transform-origin:2cm;  
+    animation-direction: reverse;
+}
+
+@keyframes PanaAnimation {
+    0%   {transform:rotateZ(0deg);transform-origin:top;}
+    25%  {transform: rotateZ(0.3deg);transform-origin:top;}
+    50%  {transform: rotateZ(0.3deg);transform-origin:top;}
+    75%  {transform: rotateZ(-0.3deg);transform-origin:top;}
+    100% {transform: rotateZ(-0.3deg);transform-origin:top;}
+}
+
+/*neck animation*/
+#path432,#path494,#path1598,#path1596,#g1600,#g1616,#path1628{
+  animation-name:neck; 
+  animation-duration: 2s; 
+  animation-delay: 0.01s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 2cm;
+}
+
+#g462,#path2908,#g2896,#g2910,#g2922,#path496,#g498,#g516,#g534,#g552,#path570,#path572,#g574,#g586,#g606,#g608,#g616,#g720,#g736,#g748,#g760,#g784,#g820,#g832,#g844,#g868,#g984,#g1008,#g1020,#g1180,#g1192,#g1204,#path2278,#path3192,#path3194,#g1360,#g1336,#g1232,#g1220,#g1204,#g820,#g784,#g796,#g808{
+  animation-name: hands;
+  animation-duration: 2s;
+  animation-delay: 0.01s;
+  animation-iteration-count: infinite;
+  transform-origin: 2cm;
+}
+
+#g1670,#g1688,#g1706,#g1722,#g1952{
+  animation-name: face; 
+  animation-duration: 2s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 2cm;
+}
+
+#g3160,#g3176,#path3192,#path3194{
+  animation-name: hand_icon; 
+  animation-duration: 2s; 
+  animation-delay: 0.01s; 
+  animation-iteration-count: infinite;  
+}
+
+#g3534,#g3470,#g3486,#g3502,#path3958,#path3960,#path3962,#path4004,#path4006,#path4008,#path4010,#path4012,#path4014,#path4016,#path4018,#path4020{
+  animation-name: points; 
+  animation-duration: 3s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 1cm;
+}
+
+#g3502{
+  animation-direction: alternate;
+}
+
+#path4004{
+  animation: rotate 2s linear infinite;
+  transform-origin: center center; 
+}
+
+@keyframes rotate{
+  0% {transform:rotate(0deg);} 
+  25% {transform:rotate(1deg);}
+  50% {transform:rotate(1deg);} 
+  75% {transform: rotate(-1deg);} 
+  100% {transform:rotate(-1deg);} 
+}
+
+
+
+@keyframes points{
+  0% {transform:rotate(0deg);} 
+  25% {transform:rotate(1deg);}
+  50% {transform:rotate(2deg);} 
+  75% {transform: rotate(-1deg);} 
+  100% {transform:rotate(-2deg);} 
+}
+
+@keyframes hand_icon{
+  0% { transform: translateX(0px)}
+  25% { transform: translateX(35px) }
+  50% { transform: translateX(35px) }
+  75% { transform: translateX(-35px) }
+  100% { transform: translateX(-35px) }
+}
+
+@keyframes face {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(0.01deg); }
+  50% { transform: rotate(0.01deg); }
+  75% { transform: rotate(-0.01deg); }
+  100% { transform: rotate(-0.01deg); }
+}
+
+#path1734,#path1736{
+  animation-name: eyebrow; 
+  animation-duration: 1s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 2cm;
+}
+
+#path1778,#path1780,#path1782,#path1968{
+  animation-name: nose; 
+  animation-duration: 1s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 2cm;
+}
+
+#g3728,#g3744,#g3760,#g3776,#g3792,#g3808,#g3824,#g3840,#g3858,#g3874,#g3890,#g3906,#path3922,#g3924,#g3940,#path3970,#path3982,#path3980,#path3978,#path3990,#path3998,#path3689,#path4002,#path4000{
+  animation-name:setting; 
+  animation-duration: 2s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear;
+}
+
+#path3726{
+  animation-name: scaling; 
+  animation-duration: 2s; 
+  animation-delay:0s; 
+  animation-iteration-count: infinite;
+}
+
+#path3434,#path3446,#path3438,#path3444,#path3452,#path3456,#path3460,#path3462,#path3466{
+  animation-name: appear_disappear_reappear;
+  animation-duration: 2s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite;
+}
+
+#path3440,#path3436,#path3442,#path3448,#path3450,#path3454,#path3458,#path3464,#path3468{
+  animation-name: appear_disappear_reappear;
+  animation-duration: 2s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+
+
+.animated-box {
+  width: 400px; /* Initial width */
+  height: 100px; /* Example height */
+  background-color: #3498db;
+  margin: 50px auto;
+  animation: reshape 4s infinite; /* Apply the animation */
+}
+
+
+@keyframes appear_disappear_reappear {
+  0%, 100% {
+      opacity: 1;           /* Fully visible */
+      visibility: visible;
+  }
+  25%, 75% {
+      opacity: 0;           /* Fully transparent */
+      visibility: hidden;
+  }
+  50% {
+      opacity: 1;           /* Fully visible */
+      visibility: visible;
+  }
+}
+
+@keyframes scaling{
+  0% {
+    transform: scaleX(1.05); /* Initial state (original size) */
+  }
+  25% {
+      transform: scaleX(1); /* Contracted state (scaled down) */
+  }
+  50% {
+      transform: scaleX(1.05); /* Relaxed state (original size) */
+  }
+  75% {
+      transform: scaleX(1.1); /* Expanded state (scaled up) */
+  }
+  100% {
+      transform: scaleX(1.05); /* Back to initial state */
+  }
+}
+
+#path3956{
+  animation-name: random; 
+  animation-duration: 4s; 
+  animation-iteration-count: infinite; 
+  animation-delay: 0s;
+}
+
+@keyframes random{
+  0% {transform: rotate(0deg);} 
+  50% {transform: rotate(1deg);} 
+  100% {transform: rotate(-1deg);}
+}
+
+
+@keyframes setting{
+  0% {transform: rotate(0deg);} 
+  50% {transform: rotate(1deg);} 
+  100% {transform: rotate(-1deg);}
+}
+
+@keyframes nose{
+  0% {transform: translateY(0px);} 
+  50% {transform: translateY(3px);} 
+  100% {transform:translateY(-3px);}
+}
+
+@keyframes eyebrow{
+  0% {transform: translateY(0px);} 
+  50% {transform: translateY(8px);} 
+  100% {transform:translateY(-8px);}
+}
+
+
+
+
+@keyframes hands {
+  0% { transform: translate(0px); }
+  25% {transform: translate(6px);}
+  50% { transform: translate(6px); }
+  75% {transform: translate(-6px);}
+  100% { transform: translate(-6px); }
+}
+
+
+@keyframes neck{
+    0%   {transform:rotateZ(0deg);transform-origin:top;}
+    25%  {transform: rotateZ(0.05deg);transform-origin:top;}
+    50%  {transform: rotateZ(0.05deg);transform-origin:top;}
+    75%  {transform: rotateZ(-0.05deg);transform-origin:top;}
+    100% {transform: rotateZ(-0.05deg);transform-origin:top;}
+}
+
+@keyframes Legs {
+    0%   {transform:rotateZ(0deg);transform-origin:top;}
+    25%  {transform: rotateZ(0.2deg);transform-origin:top;}
+    50%  {transform: rotateZ(0.2deg);transform-origin:top;}
+    75%  {transform: rotateZ(-0.2deg);transform-origin:top;}
+    100% {transform: rotateZ(-0.2deg);transform-origin:top;}
+}
+
+/*now let us do the application animation*/
+#path3058,#g3030,#g3046,#path3124,#g3064,#g3080,#g3096,#g3112,#g2818,#g2820,#image3122{
+  animation-name: icon_application; 
+  animation-duration: 2s; 
+  animation-delay: 0.01s; 
+  animation-iteration-count: infinite; 
+}
+
+@keyframes icon_application{
+  0% {transform: translate(0px);} 
+  25% {transform: translate(18px);}
+  50% {transform: translate(18px);}
+  75% {transform: translate(-18px);} 
+  100% {transform:translate(-18px);}
+}
