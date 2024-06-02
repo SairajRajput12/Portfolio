@@ -41,7 +41,7 @@ nav .navlink{
 /* Navbar.css */
 
 .navbar {
-    /* background-color: black; */
+    background-color: black;
     padding: 10px;
     display: flex;
     padding-top: 0px;
@@ -56,8 +56,8 @@ nav .navlink{
 }
 
 .navbar img {
-    width: 55px; /* Adjust the size as needed */
-    height: auto;
+    width: 125px; /* Adjust the size as needed */
+    height: 125px;
     margin-right: 20px; /* Space between the image and the links */
     /* flex-direction: row; */
 }

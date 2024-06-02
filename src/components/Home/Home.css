@@ -1,0 +1,163 @@
+
+body{
+  background-color: black;
+  overflow: hidden;
+}
+
+#homeContent{
+  display: flex; 
+  flex-direction: row;
+  overflow: hidden;
+}
+
+
+.container{
+  display: inline-block; 
+}
+
+.con{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 90vh;
+}
+
+.wrapper{
+  display: inline-flex;
+}
+
+.wrapper .static-txt{
+  font-size: 60px;
+  color: white; 
+  font-size: 60px; 
+  font-weight: 400; 
+}
+
+.wrapper .dynamic-txt{
+  margin-left: 15px; 
+  line-height: 80px; 
+  /* background: red;  */
+  height: 70px;
+  overflow:hidden;
+}
+
+.dynamic-txt li{
+  position: relative;
+  list-style: none; 
+  font-size: 60px; 
+  font-weight: 500; 
+  color: #FC6060;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+.dynamic-txt li span{
+  position: relative;
+}
+
+.dynamic-txt li span::after{
+  content:""; 
+  position:absolute; 
+  left: 0;
+  height: 90px; 
+  width: 500px; 
+  background:black; 
+  border-left: 2px solid #FC6060;
+  animation: typing 3s steps(14) infinite;
+}
+
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+
+
+@keyframes slide{
+  100%{
+    top: -340px; 
+  }
+}
+
+.roboto-serif {
+  font-family: "Roboto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "GRAD" 0;
+}
+
+
+
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.fira-code {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}

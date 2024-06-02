@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Developer</title>
-    <link rel="stylesheet" href="/Homepage Animation For SVG/Home.css">
-</head>
-<body>
-  <div style="background-color: black;">
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
+export default function Ani(){
+    return(
+        <div>
+            
+        <svg
 xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:cc="http://creativecommons.org/ns#"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -21,7 +14,281 @@ height="533.33331"
 width="800"
 xml:space="preserve"
 id="svg2"
-version="1.1"><metadata
+version="1.1">
+   <style>
+            {`
+            /*giving animation to the hammer*/
+#g30,#g46,#path64,#path64,#g68,#path84,#g86,#g98,#g110,#g122,#g134,#g146,#g158,#path66,#path82{
+    animation-name: PanaAnimation;
+    animation-duration: 2s;
+    animation-delay: 0.01s;
+    animation-iteration-count: infinite;
+    transform-origin:2cm;  
+    animation-direction: reverse;
+}
+
+
+@keyframes PanaAnimation {
+    0%   {transform:rotateZ(0deg);transform-origin:top;}
+    25%  {transform: rotateZ(0.3deg);transform-origin:top;}
+    50%  {transform: rotateZ(0.3deg);transform-origin:top;}
+    75%  {transform: rotateZ(-0.3deg);transform-origin:top;}
+    100% {transform: rotateZ(-0.3deg);transform-origin:top;}
+}
+
+/*neck animation*/
+#path432,#path494,#path1598,#path1596,#g1600,#g1616,#path1628{
+  animation-name:neck; 
+  animation-duration: 2s; 
+  animation-delay: 0.01s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 2cm;
+}
+
+#g462,#path2908,#g2896,#g2910,#g2922,#path496,#g498,#g516,#g534,#g552,#path570,#path572,#g574,#g586,#g606,#g608,#g616,#g720,#g736,#g748,#g760,#g784,#g820,#g832,#g844,#g868,#g984,#g1008,#g1020,#g1180,#g1192,#g1204,#path2278,#path3192,#path3194,#g1360,#g1336,#g1232,#g1220,#g1204,#g820,#g784,#g796,#g808{
+  animation-name: hands;
+  animation-duration: 2s;
+  animation-delay: 0.01s;
+  animation-iteration-count: infinite;
+  transform-origin: 2cm;
+}
+
+#g1670,#g1688,#g1706,#g1722,#g1952{
+  animation-name: face; 
+  animation-duration: 2s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 2cm;
+}
+
+#g3160,#g3176,#path3192,#path3194{
+  animation-name: hand_icon; 
+  animation-duration: 2s; 
+  animation-delay: 0.01s; 
+  animation-iteration-count: infinite;  
+}
+
+#g3534,#g3470,#g3486,#g3502,#path3958,#path3960,#path3962,#path4004,#path4006,#path4008,#path4010,#path4012,#path4014,#path4016,#path4018,#path4020{
+  animation-name: points; 
+  animation-duration: 3s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 1cm;
+}
+
+#g3502{
+  animation-direction: alternate;
+}
+
+#path4004{
+  animation: rotate 2s linear infinite;
+  transform-origin: center center; 
+}
+
+@keyframes rotate{
+  0% {transform:rotate(0deg);} 
+  25% {transform:rotate(1deg);}
+  50% {transform:rotate(1deg);} 
+  75% {transform: rotate(-1deg);} 
+  100% {transform:rotate(-1deg);} 
+}
+
+
+
+@keyframes points{
+  0% {transform:rotate(0deg);} 
+  25% {transform:rotate(1deg);}
+  50% {transform:rotate(2deg);} 
+  75% {transform: rotate(-1deg);} 
+  100% {transform:rotate(-2deg);} 
+}
+
+@keyframes hand_icon{
+  0% { transform: translateX(0px)}
+  25% { transform: translateX(35px) }
+  50% { transform: translateX(35px) }
+  75% { transform: translateX(-35px) }
+  100% { transform: translateX(-35px) }
+}
+
+@keyframes face {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(0.01deg); }
+  50% { transform: rotate(0.01deg); }
+  75% { transform: rotate(-0.01deg); }
+  100% { transform: rotate(-0.01deg); }
+}
+
+#path1734,#path1736{
+  animation-name: eyebrow; 
+  animation-duration: 1s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 2cm;
+}
+
+#path1778,#path1780,#path1782,#path1968{
+  animation-name: nose; 
+  animation-duration: 1s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 2cm;
+}
+
+#g3728,#g3744,#g3760,#g3776,#g3792,#g3808,#g3824,#g3840,#g3858,#g3874,#g3890,#g3906,#path3922,#g3924,#g3940,#path3970,#path3982,#path3980,#path3978,#path3990,#path3998,#path3689,#path4002,#path4000{
+  animation-name:setting; 
+  animation-duration: 2s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear;
+}
+
+#path3726{
+  animation-name: scaling; 
+  animation-duration: 2s; 
+  animation-delay:0s; 
+  animation-iteration-count: infinite;
+}
+
+#path3434,#path3446,#path3438,#path3444,#path3452,#path3456,#path3460,#path3462,#path3466{
+  animation-name: appear_disappear_reappear;
+  animation-duration: 2s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite;
+}
+
+#path3440,#path3436,#path3442,#path3448,#path3450,#path3454,#path3458,#path3464,#path3468{
+  animation-name: appear_disappear_reappear;
+  animation-duration: 2s; 
+  animation-delay: 0s; 
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+
+
+.animated-box {
+  width: 400px; /* Initial width */
+  height: 100px; /* Example height */
+  background-color: #3498db;
+  margin: 50px auto;
+  animation: reshape 4s infinite; /* Apply the animation */
+}
+
+
+@keyframes appear_disappear_reappear {
+  0%, 100% {
+      opacity: 1;           /* Fully visible */
+      visibility: visible;
+  }
+  25%, 75% {
+      opacity: 0;           /* Fully transparent */
+      visibility: hidden;
+  }
+  50% {
+      opacity: 1;           /* Fully visible */
+      visibility: visible;
+  }
+}
+
+@keyframes scaling{
+  0% {
+    transform: scaleX(1.05); /* Initial state (original size) */
+  }
+  25% {
+      transform: scaleX(1); /* Contracted state (scaled down) */
+  }
+  50% {
+      transform: scaleX(1.05); /* Relaxed state (original size) */
+  }
+  75% {
+      transform: scaleX(1.1); /* Expanded state (scaled up) */
+  }
+  100% {
+      transform: scaleX(1.05); /* Back to initial state */
+  }
+}
+
+#path3956{
+  animation-name: random; 
+  animation-duration: 4s; 
+  animation-iteration-count: infinite; 
+  animation-delay: 0s;
+}
+
+@keyframes random{
+  0% {transform: rotate(0deg);} 
+  50% {transform: rotate(1deg);} 
+  100% {transform: rotate(-1deg);}
+}
+
+
+@keyframes setting{
+  0% {transform: rotate(0deg);} 
+  50% {transform: rotate(1deg);} 
+  100% {transform: rotate(-1deg);}
+}
+
+@keyframes nose{
+  0% {transform: translateY(0px);} 
+  50% {transform: translateY(3px);} 
+  100% {transform:translateY(-3px);}
+}
+
+@keyframes eyebrow{
+  0% {transform: translateY(0px);} 
+  50% {transform: translateY(8px);} 
+  100% {transform:translateY(-8px);}
+}
+
+
+
+
+@keyframes hands {
+  0% { transform: translate(0px); }
+  25% {transform: translate(6px);}
+  50% { transform: translate(6px); }
+  75% {transform: translate(-6px);}
+  100% { transform: translate(-6px); }
+}
+
+
+@keyframes neck{
+    0%   {transform:rotateZ(0deg);transform-origin:top;}
+    25%  {transform: rotateZ(0.05deg);transform-origin:top;}
+    50%  {transform: rotateZ(0.05deg);transform-origin:top;}
+    75%  {transform: rotateZ(-0.05deg);transform-origin:top;}
+    100% {transform: rotateZ(-0.05deg);transform-origin:top;}
+}
+
+@keyframes Legs {
+    0%   {transform:rotateZ(0deg);transform-origin:top;}
+    25%  {transform: rotateZ(0.2deg);transform-origin:top;}
+    50%  {transform: rotateZ(0.2deg);transform-origin:top;}
+    75%  {transform: rotateZ(-0.2deg);transform-origin:top;}
+    100% {transform: rotateZ(-0.2deg);transform-origin:top;}
+}
+
+/*now let us do the application animation*/
+#path3058,#g3030,#g3046,#path3124,#g3064,#g3080,#g3096,#g3112,#g2818,#g2820,#image3122{
+  animation-name: icon_application; 
+  animation-duration: 2s; 
+  animation-delay: 0.01s; 
+  animation-iteration-count: infinite; 
+}
+
+@keyframes icon_application{
+  0% {transform: translate(0px);} 
+  25% {transform: translate(18px);}
+  50% {transform: translate(18px);}
+  75% {transform: translate(-18px);} 
+  100% {transform:translate(-18px);}
+}
+            `}
+        </style>
+
+
+<metadata
  id="metadata8"><rdf:RDF><cc:Work
      rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
@@ -109,7 +376,9 @@ version="1.1"><metadata
      id="path162"
      d="m 1533.45,1977.15 -0.13,0.32 c 0.16,-0.01 0.32,-0.01 0.48,-0.02 v 0 l -0.35,-0.3" /></clipPath><clipPath
    id="clipPath178"
-   clipPathUnits="userSpaceOnUse"><path
+   clipPathUnits="userSpaceOnUse">
+   
+   <path
      id="path176"
      d="m 3462.31,0 h -57.69 c 18.48,93.0508 9.1,229.059 -31.43,373.691 -60.05,214.289 -168.69,376.891 -258.7,397.911 32.92,17.687 68.97,32.476 107.11,41.097 v 0 c 31.55,-59.539 59.61,-124.59 84.43,-191.168 C 3416.36,325.59 3462.31,0 3462.31,0 M 2463.6,0 h -28.07 c 14.93,24.8711 29.3,52.6797 42.75,82.9414 C 2472.7,54.9609 2467.73,27.1602 2463.6,0 m -286.81,0 h -31.39 c -5.79,97.8789 3.49,199.109 20.55,295.691 h 14.79 C 2161.03,181.531 2160.55,77.1016 2176.79,0 m 399.62,450.34 4.78,174.199 c 13.72,-13.988 27.05,-28.398 39.71,-43.141 0,0 -19.09,-51.918 -44.49,-131.058 m 413.79,32.398 c -22.11,52.871 -43.5,100.492 -62.3,136.563 0,0 31.19,38.258 82.95,81.429 -20.57,-52.218 -27.84,-128.789 -20.65,-217.992 M 2649.2,680 v 0 l -65.68,29.57 0.28,10.25 65.4,-39.82 m 320.8,81.398 218.8,120.403 c -10.3,6.199 -18.4,10.301 -18.4,10.301 v 0 c 0,0 8.1,-4.102 18.4,-10.301 h 0.1 c 17.5,-10.602 41.2,-27 41.2,-39 v 0 L 2970,761.398" /></clipPath><linearGradient
    id="linearGradient184"
@@ -2786,7 +3055,11 @@ version="1.1"><metadata
      style="stop-opacity:1;stop-color:#1852a0" /><stop
      id="stop3994"
      offset="1"
-     style="stop-opacity:1;stop-color:#067ed3" /></linearGradient></defs><g
+     style="stop-opacity:1;stop-color:#067ed3" /></linearGradient></defs>
+     
+     
+     
+     <g
  transform="matrix(1.3333333,0,0,-1.3333333,0,533.33333)"
  id="g10"><g
    transform="scale(0.1)"
@@ -2892,7 +3165,9 @@ version="1.1"><metadata
            preserveAspectRatio="none"
            style="image-rendering:optimizeSpeed"
            height="1"
-           width="1" /></g></g></g><g
+           width="1" />
+           
+           </g></g></g><g
      id="g134"><g
        clip-path="url(#clipPath140)"
        id="g136"><g
@@ -2929,10 +3204,7 @@ version="1.1"><metadata
            style="image-rendering:optimizeSpeed"
            height="1"
            width="1" /></g></g></g>
-           <!-- <path
-     id="path170"
-     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 1555.55,1977.39 c 0,0 -13.29,-40.88 24.86,-60.26 l -24.86,60.26" /> -->
+           
      <g
      id="g172"><g
        clip-path="url(#clipPath178)"
@@ -3948,43 +4220,12 @@ version="1.1"><metadata
        clip-path="url(#clipPath1402)"
        id="g1398">
        
-<!--            
-       <path
-         id="path1410"
-         style="fill:url(#linearGradient1408);fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 2529.01,2071.85 v -143.84 c 0,0 331.1,2.66 702.37,-21.93 l 8.47,129.47 c 0,0 -322.76,38.27 -710.84,36.3" /> -->
-        
+  
         </g></g>
         
-    <!-- <path
-     id="path1412"
-     style="fill:#ebefff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 2613.81,1975.74 42.87,-1.31 c 4.84,-0.14 8.32,0.81 10.42,2.88 2.12,2.07 3.25,5.81 3.41,11.22 l 0.46,14.99 c 0.17,5.56 -0.73,9.39 -2.72,11.45 -1.99,2.07 -5.4,3.17 -10.23,3.32 l -41.04,1.25 -1.36,-0.51 -0.53,-1.28 z m -23.41,63.3 c 0.07,2.45 1.26,3.65 3.55,3.58 l 67.08,-2.04 c 6.64,-0.2 12.26,-1.21 16.88,-3.03 4.61,-1.82 8.31,-4.31 11.09,-7.47 2.78,-3.16 4.74,-6.95 5.92,-11.37 1.17,-4.42 1.68,-9.34 1.52,-14.74 l -0.57,-18.42 c -0.16,-5.41 -0.96,-10.29 -2.4,-14.62 -1.44,-4.35 -3.64,-8.02 -6.6,-11 -2.96,-2.98 -6.81,-5.24 -11.53,-6.79 -4.71,-1.53 -10.38,-2.19 -17.02,-2 l -36.12,1.11 -7.48,21.12 -0.97,0.03 -0.64,-20.88 -25.31,0.77 2.6,85.75" /> -->
+    
      
-     <!-- <path
-     id="path1414"
-     style="fill:#ebefff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 2732.74,2000.65 -0.86,0.03 -0.81,-26.78 c -0.03,-1.15 0.52,-1.74 1.67,-1.77 l 75.43,-2.3 -0.7,-23.21 -98.9,3 c -2.38,0.08 -3.53,1.34 -3.45,3.79 l 2.49,82.07 c 0.07,2.45 1.29,3.65 3.67,3.58 l 96.07,-2.92 c 2.46,-0.08 3.65,-1.35 3.58,-3.8 l -0.71,-23.22 -23.73,-8.01 -0.99,0.03 0.36,11.92 -1.18,1.39 -50.73,1.54 -1.31,-0.51 -0.34,-1.16 -0.34,-11.18 41.77,-1.27 -0.56,-18.19 -35.02,1.07 -5.41,15.9" /> -->
      
-     <!-- <path
-     id="path1416"
-     style="fill:#ebefff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 2900.4,2002.33 -0.99,0.03 0.3,9.83 c 0.03,0.98 -0.44,1.49 -1.42,1.52 l -47.18,1.43 c -1.72,0.05 -2.93,-0.28 -3.6,-1 -0.68,-0.72 -1.05,-1.77 -1.08,-3.16 l -0.07,-2.21 c -0.06,-1.72 0.19,-2.84 0.75,-3.35 0.57,-0.51 1.66,-0.91 3.3,-1.21 l 55.28,-9.42 c 3.51,-0.6 6.48,-1.45 8.91,-2.54 2.42,-1.1 4.39,-2.51 5.9,-4.24 1.5,-1.73 2.55,-3.83 3.12,-6.31 0.59,-2.47 0.83,-5.39 0.73,-8.75 l -0.22,-7.12 c -0.11,-3.69 -0.66,-6.93 -1.65,-9.73 -0.99,-2.8 -2.54,-5.12 -4.64,-6.99 -2.1,-1.86 -4.85,-3.24 -8.24,-4.11 -3.39,-0.88 -7.53,-1.25 -12.45,-1.1 l -79.61,2.42 0.71,23.21 71.36,-2.17 c 2.13,-0.06 3.56,0.29 4.29,1.05 0.71,0.75 1.1,2.11 1.16,4.08 l 0.07,2.45 c 0.05,1.56 -0.18,2.66 -0.69,3.28 -0.52,0.63 -1.55,1.06 -3.1,1.27 l -53.36,8.38 c -3.59,0.61 -6.66,1.44 -9.21,2.5 -2.54,1.05 -4.61,2.43 -6.21,4.12 -1.59,1.68 -2.72,3.73 -3.37,6.13 -0.67,2.39 -0.94,5.22 -0.85,8.51 l 0.2,6.26 c 0.19,6.47 2.05,11.43 5.6,14.89 3.56,3.46 9.34,5.07 17.37,4.82 l 79.48,-2.41 c 2.54,-0.08 3.77,-1.43 3.69,-4.04 l -0.56,-18.44 -23.72,-7.88" /> -->
-     
-     <!-- <path
-     id="path1418"
-     style="fill:#ebefff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 2933.99,1942.78 2.72,89.43 25.31,-0.76 -2.71,-89.44 -25.32,0.77" /> -->
-     
-     <!-- <path
-     id="path1420"
-     style="fill:#ebefff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 3053.22,1977.53 c 0.04,1.31 0.02,2.68 -0.07,4.12 -0.07,1.44 -0.17,2.69 -0.31,3.76 l 0.03,1.1 25.06,-0.76 -1.33,-43.86 c -0.07,-2.29 -1.13,-3.4 -3.17,-3.35 l -67.32,2.05 c -6.64,0.2 -12.26,1.22 -16.88,3.03 -4.61,1.82 -8.3,4.31 -11.09,7.47 -2.77,3.16 -4.75,6.95 -5.92,11.37 -1.18,4.41 -1.68,9.34 -1.52,14.74 l 0.56,18.43 c 0.17,5.41 0.97,10.28 2.41,14.62 1.44,4.34 3.64,8 6.6,10.99 2.97,2.98 6.81,5.24 11.53,6.78 4.71,1.54 10.39,2.2 17.03,2 l 66.94,-2.03 c 2.37,-0.07 3.54,-1.33 3.46,-3.79 l -0.59,-19.29 -23.73,-7.89 -0.98,0.04 0.26,8.59 -1.06,1.26 -42.75,1.3 c -2.45,0.08 -4.53,-0.09 -6.22,-0.49 -1.7,-0.4 -3.1,-1.13 -4.2,-2.2 -1.09,-1.08 -1.92,-2.53 -2.46,-4.35 -0.55,-1.83 -0.87,-4.1 -0.96,-6.8 l -0.47,-15.73 c -0.16,-5.4 0.75,-9.2 2.73,-11.39 1.99,-2.2 5.4,-3.36 10.23,-3.51 l 42.39,-1.29 c 0.89,-0.02 1.35,0.45 1.38,1.44 l 0.42,13.64" /> -->
-     
-     <!-- <path
-     id="path1422"
-     style="fill:#ebefff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 3131.44,2026.3 c 1.88,-0.05 3.2,-0.38 3.97,-0.98 0.75,-0.6 1.45,-1.52 2.06,-2.76 l 31.96,-65.28 c 0.54,-1 1.3,-1.52 2.29,-1.55 l 1.35,-0.05 c 1.31,-0.04 1.99,0.6 2.03,1.92 l 2.04,67.32 22.97,-0.7 -2.61,-85.88 c -0.07,-2.37 -1.25,-3.53 -3.54,-3.45 l -36.38,1.11 c -1.71,0.04 -2.99,0.33 -3.83,0.85 -0.85,0.51 -1.62,1.47 -2.32,2.9 l -33.19,65.19 c -0.46,1 -1.23,1.52 -2.28,1.54 l -1.23,0.04 c -1.31,0.04 -1.99,-0.6 -2.02,-1.91 l -2.05,-67.2 -22.97,0.71 2.6,85.75 c 0.08,2.45 1.25,3.64 3.55,3.57 l 37.6,-1.14" /> -->
      
      <g
      id="g1424"><g
@@ -5502,18 +5743,7 @@ version="1.1"><metadata
          style="fill:url(#linearGradient3514);fill-opacity:1;fill-rule:nonzero;stroke:none"
          d="m 5218.43,2911.6 c 0,-24.68 -20.01,-44.68 -44.69,-44.68 -24.68,0 -44.69,20 -44.69,44.68 0,24.68 20.01,44.69 44.69,44.69 24.68,0 44.69,-20.01 44.69,-44.69" /></g></g>
          
-         <!-- <g
-     id="g3518">
-     
-     <g
-       clip-path="url(#clipPath3524)"
-       id="g3520">
-       <path
-         id="path3532"
-         style="fill:url(#linearGradient3530);fill-opacity:1;fill-rule:nonzero;stroke:none"
-         d="m 2323.63,2604.34 c 0,-17.45 -14.15,-31.6 -31.6,-31.6 -17.45,0 -31.6,14.15 -31.6,31.6 0,17.45 14.15,31.6 31.6,31.6 17.45,0 31.6,-14.15 31.6,-31.6" /></g>
-        
-        </g> -->
+
         
         <g
      id="g3534"><g
@@ -5783,7 +6013,10 @@ version="1.1"><metadata
      d="m 2507.76,2904.77 -46.34,93.17 4.47,2.23 46.35,-93.17 -4.48,-2.23" /><path
      id="path4020"
      style="fill:#744ca2;fill-opacity:1;fill-rule:nonzero;stroke:none"
-     d="m 1730.97,1328.4 -3.21,3.83 119.24,99.7 3.2,-3.82 -119.23,-99.71" /></g></g></svg>
-</div>
-</body>
-</html>
+     d="m 1730.97,1328.4 -3.21,3.83 119.24,99.7 3.2,-3.82 -119.23,-99.71" /></g></g>
+
+     </svg>
+     </div>
+
+    );
+}
