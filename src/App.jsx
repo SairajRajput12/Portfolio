@@ -8,6 +8,7 @@ import About from './components/About';
 import Contact from './components/ContactUs'; 
 
 function App() {
+  console.log(location.pathname);
   return (
     <div>
       <Navbar />

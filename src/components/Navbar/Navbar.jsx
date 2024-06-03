@@ -11,10 +11,10 @@ export default function Navbar(){
                 <img src={Img} alt='logo'></img>
             </div>
             <nav>
-                <Link className='navlink' to="/"><button>Home</button></Link>
-                <Link className='navlink' to="/about"><button>About</button></Link>
-                <Link className='navlink' to="/contact"><button>Contact</button></Link>
-                <Link className='navlink' to="/project"><button>Project</button></Link>
+                <Link className='navlink' to="/"><div>Home</div></Link>
+                <Link className='navlink' to="/about"><div>About</div></Link>
+                <Link className='navlink' to="/contact"><div>Contact</div></Link>
+                <Link className='navlink' to="/project"><div>Project</div></Link>
             </nav>
         </div>
     );

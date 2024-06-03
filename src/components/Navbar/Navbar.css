@@ -17,8 +17,8 @@ nav img{
     width: auto;
 }
 
-nav button{
-    background-color: rgb(0, 0, 255); 
+nav div{
+    /* background-color: rgb(0, 0, 255); 
     color: white; 
     height: auto; 
     width: auto; 
@@ -28,8 +28,25 @@ nav button{
     padding-top: 6px; 
     padding-bottom: 6px;
     padding-left: 18px; 
+    padding-right: 18px; */
+    background-color: #0A1F44; 
+    color: white; 
+    height: auto; 
+    width: auto; 
+    font-size: 28px; 
+    border-radius: 23px;
+    margin: 3px; 
+    padding-top: 6px; 
+    padding-bottom: 6px;
+    padding-left: 18px; 
     padding-right: 18px;
+    color: white;
 }
+
+nav div:hover{
+    background-color: #0c2f6a;
+}
+
 
 nav .navlink{
     margin: 12px;
@@ -41,7 +58,7 @@ nav .navlink{
 /* Navbar.css */
 
 .navbar {
-    background-color: black;
+    background:transparent;
     padding: 10px;
     display: flex;
     padding-top: 0px;

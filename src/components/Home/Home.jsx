@@ -9,9 +9,9 @@ export default function Home(){
             <div className='animation'>
                 <Lottie animationData={x} style={{ height: "auto", width: "800px" }}/>
             </div>
-            <div className='con'>
+            <div className='roboto-serif-con'>
                 <div className='wrapper'>
-                    <div className='static-txt'>I'm a </div> 
+                    <div className='static-txt' style={{fontSize:'70px'}}>Hello I am </div> 
                     <ul className='dynamic-txt'>
                         <li><span>Web developer</span></li>
                         <li><span>Problem solver</span></li>

@@ -1,6 +1,7 @@
 
 body{
-  background-color: black;
+  /* background:rgb(1, 1, 81); */ 
+  background: #0A1F44;
   overflow: hidden;
 }
 
@@ -15,7 +16,7 @@ body{
   display: inline-block; 
 }
 
-.con{
+.roboto-serif-con{
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -26,6 +27,7 @@ body{
   display: inline-flex;
 }
 
+
 .wrapper .static-txt{
   font-size: 60px;
   color: white; 
@@ -34,10 +36,10 @@ body{
 }
 
 .wrapper .dynamic-txt{
-  margin-left: 15px; 
+  margin-left: 0px; 
   line-height: 80px; 
   /* background: red;  */
-  height: 70px;
+  height: 60px;
   overflow:hidden;
 }
 
@@ -47,7 +49,7 @@ body{
   font-size: 60px; 
   font-weight: 500; 
   color: #FC6060;
-  top: 0;
+  top: -15px;
   animation: slide 12s steps(4) infinite;
 }
 
@@ -58,10 +60,10 @@ body{
 .dynamic-txt li span::after{
   content:""; 
   position:absolute; 
-  left: 0;
-  height: 90px; 
+  left: -5px;
+  height: 98px; 
   width: 500px; 
-  background:black; 
+  background: #0A1F44;
   border-left: 2px solid #FC6060;
   animation: typing 3s steps(14) infinite;
 }
@@ -83,10 +85,10 @@ body{
   }
 }
 
-.roboto-serif {
+.roboto-serif-con {
   font-family: "Roboto Serif", serif;
   font-optical-sizing: auto;
-  font-weight: 520;
+  font-weight: 1020;
   font-style: normal;
   font-variation-settings:
     "wdth" 100,
