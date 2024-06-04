@@ -1,17 +1,14 @@
-import Lottie from 'lottie-react'
 import './Home.css'
-import x from './trail_3.json'; 
+import HomeAnimation from './HomeAnimation'
 
 
 export default function Home(){
     return (
         <div id="homeContent"> 
-            <div className='animation'>
-                <Lottie animationData={x} style={{ height: "auto", width: "800px" }}/>
-            </div>
+            <HomeAnimation />
             <div className='roboto-serif-con'>
                 <div className='wrapper'>
-                    <div className='static-txt' style={{fontSize:'70px'}}>Hello I am </div> 
+                    <div className='static-txt' style={{fontSize:'80px'}}>Hello I am </div> 
                     <ul className='dynamic-txt'>
                         <li><span>Web developer</span></li>
                         <li><span>Problem solver</span></li>

@@ -32,7 +32,8 @@ body{
   font-size: 60px;
   color: white; 
   font-size: 60px; 
-  font-weight: 400; 
+  font-weight: 400;
+  margin-top: -15px; 
 }
 
 .wrapper .dynamic-txt{
@@ -46,8 +47,8 @@ body{
 .dynamic-txt li{
   position: relative;
   list-style: none; 
-  font-size: 60px; 
-  font-weight: 500; 
+  font-size: 55px; 
+  font-weight: 650; 
   color: #FC6060;
   top: -15px;
   animation: slide 12s steps(4) infinite;
@@ -61,7 +62,7 @@ body{
   content:""; 
   position:absolute; 
   left: -5px;
-  height: 98px; 
+  height: 90px; 
   width: 500px; 
   background: #0A1F44;
   border-left: 2px solid #FC6060;

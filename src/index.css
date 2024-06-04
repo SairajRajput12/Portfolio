@@ -1,3 +1,11 @@
+
+body{
+  /* background:rgb(1, 1, 81); */ 
+  background: #0A1F44;
+  overflow: hidden;
+}
+
+
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
