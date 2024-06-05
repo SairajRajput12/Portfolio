@@ -59,7 +59,8 @@ nav .navlink{
 
 .navbar {
     background:transparent;
-    padding: 10px;
+    /* background-color: red; */
+    /* padding: 10px; */
     display: flex;
     padding-top: 0px;
     align-items:center;

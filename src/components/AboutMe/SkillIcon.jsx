@@ -1,12 +1,6 @@
-export default function Skill({data}){
-    
+
+export default function Skill({name,image_path}){
     return(
-        <div>
-            {data.map(({id,name,image_path}) => {
-                return(
-                    <img src={image_path} key={name} id={id}  alt={name} />
-                )
-            })}
-        </div>
+        <img src={image_path} alt={name} />
     )
 }

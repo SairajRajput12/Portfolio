@@ -1,11 +1,12 @@
 import './About.css'; 
 import img from '../Images/BruceWayne.jpg'; 
 import Skill from './SkillIcon';
-import data from './data.json';
-
+import data from './data';
+import './Skill.css'
 
 
 export default function AboutMe(){
+    console.log(data);
     return (
         <>
             <div className='about-content'>
@@ -14,7 +15,7 @@ export default function AboutMe(){
                 </div> 
                 <div id='intro'>
                     <span className='share-tech-regular'>Sairaj Rajput</span>
-                    <p>
+                    <p style={{flexWrap: 'wrap'}}>
                     <br /> 
                     I am a passionate and dedicated web developer and IT student, committed to leveraging my skills and knowledge to create impactful digital solutions. My goal 
                     is to stay at the forefront of technological advancements while continuously evolving in the ever-changing tech landscape. I thrive on challenges and eagerly 
@@ -23,9 +24,18 @@ export default function AboutMe(){
                     </p>
                 </div>
             </div>
-            <div  style={{color:'white',display:'flex',justifyContent:'center',marginTop:'25px',marginLeft:'50px',marginRight:'50px',width:'auto',height:'auto',fontSize:'55px',fontWeight:'500'}}>
+            <div  style={{color:'white',display:'flex',justifyContent:'center',marginTop:'20px',marginLeft:'50px',marginRight:'50px',width:'auto',height:'auto',fontSize:'55px',fontWeight:'500'}}>
                 <span className='share-tech-regular'>Skills</span>
-                <Skill data={data} />
+            </div>
+            <br></br>
+            <div className='skill-icons' >
+                {data.map(({id,name,image_path}) => {
+                    {/* console.log(name)  */}
+                    console.log(image_path)
+                    return(
+                        <Skill key={id} name={name} image_path={image_path} />
+                    );
+                })}
             </div>
         </>
     )
