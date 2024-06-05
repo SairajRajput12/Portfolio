@@ -1,5 +1,10 @@
 import './About.css'; 
-import img from '../AboutMe/BruceWayne.jpg';
+import img from '../Images/BruceWayne.jpg'; 
+import Skill from './SkillIcon';
+import data from './data.json';
+
+
+
 export default function AboutMe(){
     return (
         <>
@@ -20,6 +25,7 @@ export default function AboutMe(){
             </div>
             <div  style={{color:'white',display:'flex',justifyContent:'center',marginTop:'25px',marginLeft:'50px',marginRight:'50px',width:'auto',height:'auto',fontSize:'55px',fontWeight:'500'}}>
                 <span className='share-tech-regular'>Skills</span>
+                <Skill data={data} />
             </div>
         </>
     )
