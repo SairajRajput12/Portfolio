@@ -27,8 +27,8 @@ export default function Project(){
                 <div className='project-details' onClick={displayModal} >
                     <h1 className='fira-code'>Third Project</h1>
                 </div>
-                <Modal open={showModal} onClose={displayModal} />
             </div>
+            <Modal open={showModal} onClose={displayModal} />
         </>
     )
 }
