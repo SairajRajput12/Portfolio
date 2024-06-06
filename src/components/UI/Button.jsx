@@ -1,5 +1,5 @@
-export default function Button({className,children}){
+export default function Button({className='',children,onClose}){
     return(
-        <button className={className}>{children}</button>
+        <button className={className} onClick={() => onClose()}>{children}</button>
     )
 }
