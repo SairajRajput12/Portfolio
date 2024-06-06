@@ -10,7 +10,7 @@ export default function Navbar(){
             <div>
                 <img src={Img} alt='logo'></img>
             </div>
-            <nav>
+            <nav className='fira-code'>
                 <Link className='navlink' to="/"><div>Home</div></Link>
                 <Link className='navlink' to="/about"><div>About</div></Link>
                 <Link className='navlink' to="/project"><div>Project</div></Link>
