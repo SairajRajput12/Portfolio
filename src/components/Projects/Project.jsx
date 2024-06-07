@@ -1,15 +1,19 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Modal from '../UI/Modal';
 import './Project.css'; 
 import ProjectD from './ProjectData';
+import Card from './Card';
 
 export default function Project(){
     const [showModal,setShowModal] = useState(false); 
-    
+    const [activeIndex,setActiveIndex] = useState(null); 
+    const data = (activeIndex === null ? [] : ProjectD[activeIndex]); 
+    console.log(data); 
+    function setInd(Name){
+        setActiveIndex(Name); 
+    }
 
     function displayModal(){
-        console.log('modal displayed');
-        console.log(showModal)
         setShowModal(showModal => !showModal);
     }
 
@@ -19,17 +23,16 @@ export default function Project(){
                 <h1 className='fira-code'>Project Dashboard</h1>
             </div>
             <div className='project-cards'>
-                <div className='project-details' onClick={displayModal} >
-                    <h1 className='fira-code'>First Project</h1>
-                </div>
-                <div className='project-details' onClick={displayModal} >
-                    <h1 className='fira-code'>Second Project</h1>
-                </div>
-                <div className='project-details' onClick={displayModal} >
-                    <h1 className='fira-code'>Third Project</h1>
-                </div>
+                {
+                    ProjectD.map(({Name,Description,img},index) => {
+                        console.log(index)
+                        return(
+                            <Card key={index} ind={index} clickB={setInd} displayModal={displayModal} Name={Name} />
+                        );
+                    })
+                }
             </div>
-            <Modal open={showModal} data={ProjectD} onClose={displayModal} />
+            {showModal && <Modal open={showModal} data={data} onClose={displayModal} />}
         </>
     )
 }

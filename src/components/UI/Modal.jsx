@@ -3,14 +3,9 @@ import { createPortal } from 'react-dom';
 import Button from './Button'; 
 import './Modal.css'; 
 import styled, { keyframes } from "styled-components";
-import img12 from '../Images/ProjectImages/DataSales/Screenshot 2024-06-07 135218.png';
-import img13 from '../Images/ProjectImages/DataSales/Screenshot 2024-06-07 135158.png'; 
-import img14 from '../Images/ProjectImages/DataSales/Screenshot 2024-06-07 135147.png';
-import img15 from '../Images/ProjectImages/DataSales/Screenshot 2024-06-07 135134.png'; 
 
 
-
-const changeImage = (img1, img2, img3, img4) => keyframes`
+const changeImage = (img1, img2, img3, img4,img5) => keyframes`
         0% {
             background-image: url(${img1});
         }
@@ -34,7 +29,7 @@ const changeImage = (img1, img2, img3, img4) => keyframes`
         height: 275px;
         border: 2px aqua solid;
         background-size: 100% 100%;
-        animation: ${(props) => changeImage(props.img1, props.img2, props.img3, props.img4)} 20s linear infinite;
+        animation: ${(props) => changeImage(props.img1, props.img2, props.img3, props.img4)} 25s linear infinite;
     `;
 
 
@@ -42,11 +37,16 @@ const changeImage = (img1, img2, img3, img4) => keyframes`
 export default function Modal({ open, onClose, data }) {
 
     const dialog = useRef(); 
+    console.log(data.images); 
 
-    let img1 = img12; 
-    let img2 = img13; 
-    let img3 = img14; 
-    let img4 = img15; 
+    let {img1,img2,img3,img4,img5} = data.images; 
+    let projectTech = data.tech; 
+    console.log(projectTech);
+
+    const openRepository = () => {
+        window.open(data.url, '_blank');
+    };
+
 
     useEffect(() => {
         const modal = dialog.current; 
@@ -62,15 +62,34 @@ export default function Modal({ open, onClose, data }) {
     return createPortal(
         <dialog className={`mdo${!open ? '-fade-out' : ''}`} ref={dialog} open={open} onClose={onClose}>
             <div className='project-content'>
-                <h1 className='heading'>Project Heading</h1>
+                <h1 className='heading'>{data.Name}</h1>
                 <div>
                     <div className='project-image'> 
-                        <ProjectImages img1={img1} img2={img2} img3={img3} img4={img4}></ProjectImages>
-                        <div className='tech-used'>Tech used</div>
+                        {/* <ProjectImages img1={img1} img2={img2} img3={img3} img4={img4} img5={img5 ? img5 : img1}></ProjectImages> */}
+                        <ProjectImages img1={img1} img2={img2} img3={img3} img4={img4} />
+                        <div className='tech-used'>
+                            <div className='Heading' >
+                                <span className='fira-code'>Tools used</span>
+                            </div>
+                            <div className='list' >
+                                <ul className="custom-list">
+                                    {
+                                        projectTech.map((items,index) => {
+                                            return(
+                                                <li key={index}>{items}</li>
+                                            ); 
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error dolores adipisci dicta quis, ex eum veniam totam quod qui facere est vel repudiandae delectus minima ratione nostrum, ipsum aliquid praesentium nisi enim consequuntur dolorum temporibus doloribus. Enim, aliquid tenetur dolorem vero laborum esse deleniti aut iusto alias obcaecati voluptas est?</p>
-                <Button className='button1' onClick={onClose}>Close Modal</Button>
+                <p>{data.Description}</p>
+                <div className='buttons'>
+                    <Button className='button1' onClick={onClose}>Close Modal</Button>
+                    <Button className='button1' onClick={openRepository}>Repository</Button>
+                </div>
             </div>
         </dialog>,
         document.getElementById('modal')
