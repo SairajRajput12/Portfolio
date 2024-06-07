@@ -6,13 +6,14 @@
     align-items: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-left: 150px; 
-    margin-right: 150px;
+    margin-left: 70px; 
+    margin-right: 70px;
     margin: -10px 0 0 -10px;
+    gap: 50px;
     /* padding-bottom: 150px; */
 }
 
 .skill-icons img{
-    height: 140px; 
-    width: 170px;
+    height: 85px; 
+    width: 100px;
 }

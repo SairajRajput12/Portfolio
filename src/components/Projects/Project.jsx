@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Modal from '../UI/Modal';
 import './Project.css'; 
+import ProjectD from './ProjectData';
 
 export default function Project(){
     const [showModal,setShowModal] = useState(false); 
@@ -28,7 +29,7 @@ export default function Project(){
                     <h1 className='fira-code'>Third Project</h1>
                 </div>
             </div>
-            <Modal open={showModal} onClose={displayModal} />
+            <Modal open={showModal} data={ProjectD} onClose={displayModal} />
         </>
     )
 }

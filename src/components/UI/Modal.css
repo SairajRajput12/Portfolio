@@ -1,46 +1,65 @@
-.project-content{
+:root {
+    --img1: url('../Images/ProjectImages/ProjectManagementSystem/Screenshot 2024-06-07 143651.png');
+    --img2: url('../Images/ProjectImages/ProjectManagementSystem/Screenshot 2024-06-07 143640.png');
+    --img3: url('../Images/ProjectImages/ProjectManagementSystem/Screenshot 2024-06-07 143736.png');
+    --img4: url('../Images/ProjectImages/ProjectManagementSystem/Screenshot 2024-06-07 143820.png');
+}
+
+.project-content {
     background-color: #0A1F44;
-    color: black;
-    display: flex;
     color: white;
+    display: flex;
     flex-direction: column;
     /* margin: -14px;
     padding: 24px; */
 }
 
-.mdo{
-    position: fixed;
-    background-color:  #0A1F44;
-    border: 2px white solid; 
-    height: 600px; 
-    width: 1400px; 
+.mdo {
+    position: absolute;
+    background-color: #0A1F44;
+    border: 2px white solid;
+    height: 600px;
+    width: 1400px;
     margin-top: 180px;
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style:normal; 
+    font-style: normal;
     padding: 24px;
+    animation: dropTop .3s linear;
+    left: 285px;
 }
 
-.button1{
-    height: auto; 
-    width: auto; 
-    background-color: aqua; 
-    font-size: 25px; 
+@keyframes dropTop {
+    0% {
+        transform: translateY(-100%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+}
+
+.button1 {
+    height: auto;
+    width: auto;
+    background-color: aqua;
+    font-size: 25px;
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style:normal; 
+    font-style: normal;
 }
 
-.project-content .button1:hover{
+.project-content .button1:hover {
     cursor: pointer;
     background-color: rgb(0, 96, 96);
     border: hidden;
 }
 
-.heading{
-    width: 100%; 
+.heading {
+    width: 100%;
     text-align: center;
     border-bottom: 2px aqua solid;
     padding-bottom: 20px;
@@ -48,4 +67,70 @@
 
 .blur {
     filter: blur(5px);
+}
+
+.mdo-fade-out {
+    animation: fadeout 0.3s forwards;
+}
+
+@keyframes fadeout {
+    0% {
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%) scale(0);
+        opacity: 0;
+    }
+}
+
+.project-image {
+    height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.project-images, .tech-used {
+    background-color: black;
+}
+
+.project-images {
+    width: 595px;
+    border: 2px aqua solid;
+    background-size: 100% 100%;
+    animation: changeImage 20s linear infinite;
+}
+
+@keyframes changeImage {
+    0% {
+        background-image: var(--img1);
+    }
+    25% {
+        background-image: var(--img2);
+    }
+    50% {
+        background-image: var(--img3);
+    }
+    75% {
+        background-image: var(--img4);
+    }
+    100% {
+        background-image: var(--img1);
+    }
+}
+
+.tech-used {
+    width: 500px;
+}
+
+.project-images img {
+    height: 275px;
+    width: 595px;
+    margin-left: -11px;
+    /* margin-right: 11px; */
 }
