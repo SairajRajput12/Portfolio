@@ -13,8 +13,8 @@
     position: absolute;
     background-color: #0A1F44;
     border: 2px white solid;
-    height: 600px;
-    width: 1400px;
+    height: auto;
+    width: auto;
     margin-top: 180px;
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
@@ -25,7 +25,6 @@
     align-content: center;
     left:auto; 
     right: auto; 
-    
 }
 
 @keyframes dropTop {
@@ -161,3 +160,38 @@
     justify-content: space-between; 
     gap: 40px;
   }
+
+  
+@media screen and (max-width: 600px) {
+    #mdo{
+        width: 490px; 
+        height: auto;
+        display: block; 
+        position: fixed;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right: 45px;
+        padding: 30px;
+        left: auto;
+        right: auto;
+        align-self: center;
+    }    
+}
+  
+  
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    #mdo{
+        width: 890px; 
+        height: auto;
+        display: block; 
+        position: fixed;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right: 45px;
+        padding: 30px;
+        left: auto;
+        right: auto;
+        align-self: center;
+    }    
+}
+  

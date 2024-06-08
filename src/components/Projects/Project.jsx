@@ -18,7 +18,7 @@ export default function Project(){
     }
 
     return (
-        <>
+        <div className='project'>
             <div className='project-content'>
                 <h1 className='fira-code'><b>Project Dashboard</b></h1>
             </div>
@@ -33,6 +33,6 @@ export default function Project(){
                 }
             </div>
             {showModal && <Modal open={showModal} data={data} onClose={displayModal} />}
-        </>
+        </div>
     )
 }

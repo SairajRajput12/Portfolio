@@ -60,3 +60,58 @@
     filter: blur(8px);
     -webkit-filter: blur(8px);  
 }
+
+
+@media screen and (max-width: 600px) {
+    .project{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        width: 590px;   
+    }
+
+
+    .project-cards{
+        flex-direction: column;
+        justify-content: center;
+        width: 590px;
+        /* margin-left: 225px; */
+    }
+
+    .project-details{
+        align-items: center; 
+        justify-content: center;
+    }
+
+    
+    
+}
+  
+  
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .project{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        width: 890px;   
+    }
+
+
+    .project-cards{
+        flex-direction: column;
+        justify-content: center;
+        width: 890px;
+        /* margin-left: 225px; */
+    }
+
+    .project-details{
+        align-items: center; 
+        justify-content: center;
+    }
+
+    
+    
+}
+  

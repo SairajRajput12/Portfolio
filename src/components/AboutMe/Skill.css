@@ -17,3 +17,36 @@
     height: 85px; 
     width: 100px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .skill-icons{
+        width: 590px;
+        margin-left: 70px; 
+        margin-right: 70px;
+    }   
+
+
+    .share-tech-regular-skill{
+        /* margin-left: 150%; */
+        left: auto;
+    }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    /* Your CSS styles for screen widths between 720px and 900px go here */
+    .skill-icons{
+        width: 890px;
+        margin-left: 90px; 
+        margin-right: 90px;
+    }   
+
+
+    .share-tech-regular-skill{
+        /* margin-left: 150%; */
+        left: auto;
+    }    
+  
+}
+  

@@ -93,9 +93,64 @@ nav .navlink{
 }
 
 
-.fira-code {
+.fira-code-nav {
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style:normal; 
   }
+
+@media screen and (max-width: 600px) {
+    .fira-code-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fira-code-nav.open {
+        display: flex;
+    }
+
+    .navlink {
+        margin: 10px 0;
+        font-size: 20px; /* Adjust size for mobile */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .fira-code-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fira-code-nav.open {
+        display: flex;
+    }
+
+    .navlink {
+        margin: 10px 0;
+        font-size: 20px; /* Adjust size for mobile */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo img {
+        width: 85px;
+        height: 85px;
+    }
+}
+  

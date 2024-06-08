@@ -4,7 +4,7 @@ import ContactForm from './Form'
 import './contact.css'
 export default function Contact(){
     return (
-        <section className='fira-code'>
+        <section className='fira-code-c'>
             <div className='form'>
                 <ContactForm />
                 <Lottie animationData={x} style={{ height: "auto", width: "500px" }}/>

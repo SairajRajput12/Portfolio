@@ -20,6 +20,8 @@
     background-color: #223E66;
     border-radius: 35px;
     border: 2px solid white;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 
@@ -28,18 +30,21 @@
     width: 350px;
     height: 400px;
     display: flex;
+    background: url('../Images/BruceWayne.jpg');
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
     /* border: 2px solid white; */
 }
 
-img{
+/* img{ */
     /* padding: 5px;  */
     /* margin: 3px; */
-    width: 310px; 
+    /* width: 310px; 
     height: 390px;
-    padding-left: 15px;
+    padding-left: 15px; */
     /* height: 400px; */
-    padding-top: -5px;
-}
+    /* padding-top: -5px;
+} */
 
 #intro{
     width: auto; 
@@ -56,6 +61,7 @@ img{
     border-left: 2px solid white;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #intro p{
@@ -64,6 +70,7 @@ img{
     padding-bottom:'30px'; 
     margin-top: 0px;
     margin-bottom: 0px;
+    flex-wrap: wrap;
 }
 
 p{
@@ -142,7 +149,7 @@ p{
     /* border-bottom: 2px aqua solid; */
     font-size: 55px;
   }
-  .share-tech-regular {
+  .share-tech-regular-skill , .share-tech-regular{
     font-family: "Share Tech", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -166,3 +173,87 @@ p{
   .social-media img:hover{
     cursor: pointer;
   }
+
+  .skill-title{
+    color:white; 
+    display:flex; 
+    justify-content:center; 
+    margin-top:20px;
+    margin-left:50px; 
+    margin-right:50px; 
+    width:auto; 
+    height:auto; 
+    font-size:55px; 
+    font-weight:500; 
+    text-align:center;
+  }
+
+
+
+  
+@media screen and (min-width: 600px) and (max-width: 1200px)  {
+  .about-content{
+    display: flex; 
+    flex-direction: column;
+    width: 890px; 
+    height: auto;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  #intro{
+    border-left: none; 
+    height: auto; 
+    width: auto;
+    margin-bottom: 14px;
+  }
+
+  .skill-title{
+    width: 890px;
+  }
+
+  #photo{
+    width: 200px; 
+    height: 300px;
+    margin-top: 22px;
+  }
+
+  .social-media{
+    margin-bottom: 12px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .about-content{
+    display: flex; 
+    flex-direction: column;
+    width: 590px; 
+    height: auto;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  #intro{
+    border-left: none; 
+    height: auto; 
+    width: auto;
+    margin-bottom: 14px;
+  }
+
+  .skill-title{
+    width: 590px;
+  }
+
+  #photo{
+    width: 200px; 
+    height: 300px;
+    margin-top: 22px;
+  }
+
+  .social-media{
+    margin-bottom: 12px;
+  }
+}

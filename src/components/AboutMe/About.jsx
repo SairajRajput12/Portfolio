@@ -14,10 +14,10 @@ export default function AboutMe(){
     };
 
     return (
-        <>
+        <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
             <div className='about-content'>
                 <div id='photo'>
-                    <img src={img} alt='Bruce wayne' />
+                    {/* <img src={img} alt='Bruce wayne' /> */}
                 </div> 
                 <div id='intro'>
                     <span className='share-tech-regular'>Sairaj Rajput</span>
@@ -33,8 +33,8 @@ export default function AboutMe(){
                     </div>
                 </div>
             </div>
-            <div  style={{color:'white',display:'flex',justifyContent:'center',marginTop:'20px',marginLeft:'50px',marginRight:'50px',width:'auto',height:'auto',fontSize:'55px',fontWeight:'500'}}>
-                <span className='share-tech-regular'>Skills</span>
+            <div className='skill-title'>
+                <span className='share-tech-regular-skill'>Technical Skills</span>
             </div>
             <br></br>
             <div className='skill-icons' >
@@ -46,18 +46,6 @@ export default function AboutMe(){
                     );
                 })}
             </div>
-        </>
+        </div>
     )
 }
-/*
-4
-3 
-3 
-3
-3 
-4
-2
-3
-2
-2
-*/

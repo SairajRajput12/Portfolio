@@ -8,7 +8,7 @@ body{
 #homeContent{
   display: flex; 
   flex-direction: row;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
@@ -36,6 +36,10 @@ body{
   margin-top: -15px; 
 }
 
+.static-txt span{
+  font-size: 80px;
+}
+
 .wrapper .dynamic-txt{
   margin-left: 0px; 
   line-height: 80px; 
@@ -49,7 +53,8 @@ body{
   list-style: none; 
   font-size: 55px; 
   font-weight: 650; 
-  color: #FC6060;
+  color:aqua;
+  /* color:#FC6060; */
   top: -15px;
   animation: slide 12s steps(4) infinite;
 }
@@ -63,9 +68,10 @@ body{
   position:absolute; 
   left: -5px;
   height: 90px; 
-  width: 500px; 
+  width: 100%; 
   background: #0A1F44;
-  border-left: 2px solid #FC6060;
+  /* border-left: 2px solid #FC6060; */
+  border-left: 2px solid aqua;
   animation: typing 3s steps(14) infinite;
 }
 
@@ -163,4 +169,92 @@ body{
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+@media screen and (max-width: 600px) {
+  #homeContent {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .roboto-serif-con{
+    width: 600px;
+  }
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Adjusts the layout to column */
+    text-align:left;
+    /* gap: 12px; */
+  }
+
+  .static-txt{
+    font-size: 45px;
+    margin-left: 32px;
+    margin-right: -12px;
+  }
+
+  .static-txt span{
+    font-size: 50px;
+  }
+
+  .wrapper .static-txt {
+    font-size: 45px; /* Adjust font size for smaller screens */
+    text-align: center;
+    /* margin-left: 30px; */
+    margin-right: -12px;
+  }
+
+  .dynamic-txt li {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  /* Your CSS styles for screen widths between 720px and 900px go here */
+  #homeContent {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .roboto-serif-con{
+    width: 600px;
+  }
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Adjusts the layout to column */
+    text-align:left;
+    /* gap: 12px; */
+  }
+
+  .static-txt{
+    font-size: 55px;
+    margin-left: 32px;
+    margin-right: -12px;
+  }
+
+  .static-txt span{
+    font-size: 55px;
+  }
+
+  .wrapper .static-txt {
+    font-size: 45px; /* Adjust font size for smaller screens */
+    text-align: center;
+    /* margin-left: 30px; */
+    margin-right: -12px;
+  }
+
+  .dynamic-txt li {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
 }
