@@ -14,7 +14,9 @@
     margin-left: 50px; 
     margin-right: 50px;
     gap: 20px;
-    height: 490px;
+    /* height: 490px; */
+    width: auto; 
+    height: auto;
     background-color: #223E66;
     border-radius: 35px;
     border: 2px solid white;
@@ -52,10 +54,12 @@ img{
     width: 1250px; 
     height: 480px;
     border-left: 2px solid white;
+    align-items: center;
+    justify-content: center;
 }
 
 #intro p{
-    font-size: 30px;
+    font-size: 25px;
     padding-left:'30px'; 
     padding-bottom:'30px'; 
     margin-top: 0px;
@@ -134,12 +138,31 @@ p{
     font-style: normal;
   }
 
+  #intro span{
+    /* border-bottom: 2px aqua solid; */
+    font-size: 55px;
+  }
   .share-tech-regular {
     font-family: "Share Tech", sans-serif;
     font-weight: 500;
     font-style: normal;
     color: rgb(0, 255, 255);
     padding-left: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   
+
+  .social-media{
+    display: flex; 
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .social-media img{
+    width: 120px; 
+    height: 120px;
+  }
+  
+  .social-media img:hover{
+    cursor: pointer;
+  }

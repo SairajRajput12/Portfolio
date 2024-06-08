@@ -3,10 +3,16 @@ import img from '../Images/BruceWayne.jpg';
 import Skill from './SkillIcon';
 import data from './data';
 import './Skill.css'
-
+import img1 from './github_PNG40.png'; 
+import img2 from './Leetcode.png'; 
+import img3 from './Linkedine.png'; 
 
 export default function AboutMe(){
     console.log(data);
+    const handleImageClick = (url) => {
+        window.open(url, '_blank');
+    };
+
     return (
         <>
             <div className='about-content'>
@@ -15,13 +21,16 @@ export default function AboutMe(){
                 </div> 
                 <div id='intro'>
                     <span className='share-tech-regular'>Sairaj Rajput</span>
-                    <p style={{flexWrap: 'wrap'}}>
+                    <p className='fira-code' style={{flexWrap: 'wrap'}}>
                     <br /> 
-                    I am a passionate and dedicated web developer and IT student, committed to leveraging my skills and knowledge to create impactful digital solutions. My goal 
-                    is to stay at the forefront of technological advancements while continuously evolving in the ever-changing tech landscape. I thrive on challenges and eagerly 
-                    embrace new opportunities to learn and grow. My academic background in IT has provided me with a solid foundation, and my hands-on experience in web development 
-                    has honed my practical skills. I am enthusiastic about collaborating with others to drive innovation and deliver high-quality digital experiences.
+                    I am an IT Engineer currently studying at VIIT College in Pune. I am a passionate and dedicated web developer, committed to leveraging my skills and knowledge to create impactful digital solutions. I am continuously evolving in the ever-changing tech landscape.
                     </p>
+                    {/* <p style={{marginTop:'12px'}}>You can connect with me</p> */}
+                    <div className='social-media'>
+                        <img src={img1} onClick={() => handleImageClick('https://github.com/SairajRajput12')} alt='first' />
+                        <img src={img2} onClick={() => handleImageClick('https://leetcode.com/Coder_Kira_13/')}  alt='second' />
+                        <img src={img3} onClick={() => handleImageClick('https://www.linkedin.com/in/sairajrajputit/')}  alt='third' />
+                    </div>
                 </div>
             </div>
             <div  style={{color:'white',display:'flex',justifyContent:'center',marginTop:'20px',marginLeft:'50px',marginRight:'50px',width:'auto',height:'auto',fontSize:'55px',fontWeight:'500'}}>

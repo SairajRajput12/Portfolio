@@ -6,7 +6,7 @@ export default function Card({ displayModal, Name, clickB,ind }) {
 
     return (
         <div className='project-details' onClick={handleClick}>
-            <h1 className='fira-code'>{Name}</h1>
+            <h1 className='fira-code'><b>{Name}</b></h1>
         </div>
     );
 }

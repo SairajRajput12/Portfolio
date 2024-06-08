@@ -11,10 +11,10 @@ export default function Navbar(){
                 <img src={Img} alt='logo'></img>
             </div>
             <nav className='fira-code'>
-                <Link className='navlink' to="/"><div>Home</div></Link>
-                <Link className='navlink' to="/about"><div>About</div></Link>
-                <Link className='navlink' to="/project"><div>Project</div></Link>
-                <Link className='navlink' to="/contact"><div>Contact</div></Link>
+                <Link className='navlink' to="/"><div><b>Home</b></div></Link>
+                <Link className='navlink' to="/about"><div><b>About</b></div></Link>
+                <Link className='navlink' to="/project"><div><b>Project</b></div></Link>
+                <Link className='navlink' to="/contact"><div><b>Contact</b></div></Link>
             </nav>
         </div>
     );

@@ -20,7 +20,7 @@ export default function Project(){
     return (
         <>
             <div className='project-content'>
-                <h1 className='fira-code'>Project Dashboard</h1>
+                <h1 className='fira-code'><b>Project Dashboard</b></h1>
             </div>
             <div className='project-cards'>
                 {
