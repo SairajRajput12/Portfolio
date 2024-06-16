@@ -179,7 +179,7 @@
 }
   
   
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width:1200px) {
     #mdo{
         width: 890px; 
         height: auto;

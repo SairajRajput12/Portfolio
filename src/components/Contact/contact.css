@@ -12,15 +12,19 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 40px;
-    background-color: #0A1F44;
+    background-color: transparent;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: aqua;
-    border: 3px aqua solid;
+    color: white;
+    border: 3px white solid;
+    margin-top: 45px;
+    margin-bottom: 45px; 
+    margin-left: 45px;
+    margin-right: 45px;
 }
   
   .contact-form h2 {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 20px;
   }
   
@@ -55,7 +59,7 @@
   button[type='submit'] {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: transparent;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -73,7 +77,8 @@
     text-align: center;
     font-size: 24px;
     width: 100%;
-    color: aqua;
+    color: white;
+    margin: 14px;
     /* border-bottom: 2px aqua solid; */
   }
 
@@ -86,7 +91,7 @@
 
   
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
 
   .fira-code-c{
     display: flex;

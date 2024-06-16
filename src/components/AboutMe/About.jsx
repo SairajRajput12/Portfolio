@@ -1,5 +1,4 @@
 import './About.css'; 
-import img from '../Images/BruceWayne.jpg'; 
 import Skill from './SkillIcon';
 import data from './data';
 import './Skill.css'
@@ -20,8 +19,8 @@ export default function AboutMe(){
                     {/* <img src={img} alt='Bruce wayne' /> */}
                 </div> 
                 <div id='intro'>
-                    <span className='share-tech-regular'>Sairaj Rajput</span>
-                    <p className='fira-code' style={{flexWrap: 'wrap'}}>
+                    <span className='lato-bold' >Sairaj Rajput</span>
+                    <p style={{flexWrap: 'wrap'}}>
                     <br /> 
                     I am an IT Engineer currently studying at VIIT College in Pune. I am a passionate and dedicated web developer, committed to leveraging my skills and knowledge to create impactful digital solutions. I am continuously evolving in the ever-changing tech landscape.
                     </p>
@@ -34,7 +33,7 @@ export default function AboutMe(){
                 </div>
             </div>
             <div className='skill-title'>
-                <span className='share-tech-regular-skill'>Technical Skills</span>
+                <span className='lato-bold' >Technical Skills</span>
             </div>
             <br></br>
             <div className='skill-icons' >

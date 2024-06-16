@@ -5,8 +5,8 @@ import HomeAnimation from './HomeAnimation'
 export default function Home(){
     return (
         <div id="homeContent"> 
-            <HomeAnimation />
-            <div className='roboto-serif-con'>
+            <HomeAnimation style={{width:'100%',height:'100%'}} />
+            {/* <div className='roboto-serif-con'>
                 <div className='wrapper'>
                     <div className='static-txt'><span>I am</span></div> 
                     <ul className='dynamic-txt'>
@@ -16,7 +16,7 @@ export default function Home(){
                         <li><span>Tech Enthusiast</span></li>
                     </ul>                
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

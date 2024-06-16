@@ -215,7 +215,7 @@ body{
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width:1200px){
   /* Your CSS styles for screen widths between 720px and 900px go here */
   #homeContent {
     display: flex;

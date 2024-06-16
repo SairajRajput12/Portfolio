@@ -1,38 +1,58 @@
-import { useRef, useState } from 'react';
-import Modal from '../UI/Modal';
-import './Project.css'; 
-import ProjectD from './ProjectData';
-import Card from './Card';
+import React from 'react'
+import { useState } from 'react'
+import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectStyle'
+import ProjectCard from './ProjectCards'
+import { projects } from '../../data/constant'
 
-export default function Project(){
-    const [showModal,setShowModal] = useState(false); 
-    const [activeIndex,setActiveIndex] = useState(null); 
-    const data = (activeIndex === null ? [] : ProjectD[activeIndex]); 
-    console.log(data); 
-    function setInd(Name){
-        setActiveIndex(Name); 
-    }
 
-    function displayModal(){
-        setShowModal(showModal => !showModal);
-    }
-
-    return (
-        <div className='project'>
-            <div className='project-content'>
-                <h1 className='fira-code'><b>Project Dashboard</b></h1>
-            </div>
-            <div className='project-cards'>
-                {
-                    ProjectD.map(({Name,Description,img},index) => {
-                        console.log(index)
-                        return(
-                            <Card key={index} ind={index} clickB={setInd} displayModal={displayModal} Name={Name} />
-                        );
-                    })
-                }
-            </div>
-            {showModal && <Modal open={showModal} data={data} onClose={displayModal} />}
-        </div>
-    )
+const Projects = ({openModal,setOpenModal}) => {
+  const [toggle, setToggle] = useState('all');
+  return (
+    <Container id="projects">
+      <Wrapper>
+        <Title>Projects</Title>
+        <Desc>
+          I have worked on a wide range of projects. From web apps to Machine learning application. Here are some of my projects.
+        </Desc>
+        <ToggleButtonGroup >
+          {toggle === 'all' ?
+            <ToggleButton active value="all" onClick={() => setToggle('all')}>All</ToggleButton>
+            :
+            <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
+          }
+          <Divider />
+          {toggle === 'web app' ?
+            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            :
+            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+          }
+          <Divider />
+          {/* {toggle === 'android app' ?
+            <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
+            :
+            <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
+          }
+          <Divider /> */}
+          {toggle === 'machine learning' ?
+            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
+            :
+            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
+          }
+        </ToggleButtonGroup>
+        <CardContainer>
+          {toggle === 'all' && projects
+            .map((project) => (
+              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
+            ))}
+          {projects
+            .filter((item) => item.category == toggle)
+            .map((project) => (
+              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
+            ))}
+        </CardContainer>
+      </Wrapper>
+    </Container>
+  )
 }
+
+export default Projects

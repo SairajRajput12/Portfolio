@@ -127,7 +127,7 @@ nav .navlink{
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width:1200px) {
     .fira-code-nav {
         display: none;
         flex-direction: column;
