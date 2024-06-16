@@ -53,7 +53,10 @@ nav .navlink{
     padding-left: auto;
     padding-right: auto;
     font-size: 23px;
+    color: white;
 }
+
+
 
 /* Navbar.css */
 
@@ -81,7 +84,7 @@ nav .navlink{
 }
 
 .navlink {
-    color: black;
+    /* color: white; */
     text-decoration: none;
     margin: 0 15px; /* Space between each link */
     font-size: 18px; /* Adjust the font size as needed */

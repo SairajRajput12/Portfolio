@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../Navbar/Navbar.css'
 // import Img from '../Navbar/file.png'; 
 import Img from '../Images/Logo_12.png'
+import { useTheme } from 'styled-components';
 
 
 import styled from "styled-components";
@@ -207,7 +208,7 @@ export const MobileMenuButton = styled.a`
 `;
 
 export  const MobileLink = styled.a`
-  color: ${({ theme }) => theme.text_primary};
+  color: white; 
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -236,7 +237,9 @@ export const MobileNavLogo = styled(LinkR)`
 
 
 export default function Navbar(){
-    const [open,setOpen] = useState(false);
+    const [isOpen,setIsOpen] = useState(false);
+    const theme = useTheme()
+
     const handleImageClick = (url) => {
         window.open(url, '_blank');
     };
@@ -251,7 +254,7 @@ export default function Navbar(){
                     </NavLogo> 
                     <MobileIcon>
                         <FaBars 
-                            onClick={() => (setOpen(!open))}
+                            onClick={() => (setIsOpen(!isOpen))}
                          /> 
                     </MobileIcon>
                     <NavItems>
@@ -265,9 +268,21 @@ export default function Navbar(){
                     </ButtonContainer>
                 </NavbarContainer>
                 {
-                    open && <MobileMenu>
-    
-                    </MobileMenu>
+                  isOpen && <MobileMenu isOpen={isOpen}>
+            <MobileLink href="#home" onClick={() => {
+              setIsOpen(!isOpen)
+            }}><Link className='navlink' to="/"><div><b>Home</b></div></Link></MobileLink>
+            <MobileLink href='#about' onClick={() => {
+              setIsOpen(!isOpen)
+            }}><Link className='navlink' to="/about"><div><b>About</b></div></Link></MobileLink>
+            <MobileLink href='#projects' onClick={() => {
+              setIsOpen(!isOpen)
+            }}><Link className='navlink' to="/project"><div><b>Project</b></div></Link></MobileLink>
+            <MobileLink href='#contact' onClick={() => {
+              setIsOpen(!isOpen)
+            }}> <Link className='navlink' to="/contact"><div><b>Contact</b></div></Link></MobileLink>
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} onClick={() => handleImageClick('https://github.com/SairajRajput12')} target="_blank">Github Profile</GitHubButton>
+          </MobileMenu>
                 }
             </Nav>
         );
